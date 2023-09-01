@@ -1,0 +1,140 @@
+* {
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 70px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/82/Antonio_Vaz_island_-_Recife%2C_Pernambuco%2C_Brazil_%28cropped%29.jpg);
+    gap: 10px;
+}
+
+header, main, footer {
+    border: 5px solid black;
+    color: black;
+    padding: 10px;
+}
+
+nav {
+    width: 30%;
+ }
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    grid-template-rows: 40px 1fr 100px;
+    grid-template-areas: 
+    "h1 aside"
+    "section01 aside"
+    ;
+    gap: 10px;
+    
+}
+
+aside {
+    grid-area: aside;
+    background-color: transparent;
+}
+
+#section-01 {
+    grid-area: section01;
+    background-color: white;
+  }
+
+nav, section, aside {
+    border: 5px solid black;
+    color: black;
+    padding: 10px;
+}
+
+aside section {
+    border: 5px solid black;
+    color: black;
+    height: 100px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+@media (max-width: 680px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 1fr 100px auto;
+        grid-template-areas: 
+        "h1"
+        "section01"
+        "aside"
+        ;
+       gap: 10px;
+    }
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+input{
+    width: 60%;
+}
+
+a {
+    color: black;
+    font-size: 20px;
+}
+
+h1{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(17, 14, 179, 0.918);
+    
+}
+
+h2 {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+  }
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 80%;
+    text-align: justify;
+}
+
+div.galeriaImagens{
+    width: 80%;
+    display: inline-block;
+}
+
+footer {
+    background-color: rgba(17, 14, 179, 0.918);
+    text-align: center;
+}
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 400px;
+    margin: auto;
+}
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 3px;
+    text-align: center;
+    
+}
+
